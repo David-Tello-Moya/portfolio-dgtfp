@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio | David Tello Moya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body data-page="portfolio" data-title="meta.title.portfolio">
+<svg id="waves" viewBox="0 0 1920 1080" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+<div class="card" id="card">
+  <div class="shell" id="shell">
+      <header class="top">
+        <a class="logo" href="index.html" data-page="index" data-i18n="logo"></a>
+        <nav data-i18n-attr="aria-label:nav.label">
+          <ul class="nav">
+            <li><a href="index.html" data-page="index" data-i18n="nav.home"></a></li>
+            <li><a href="portfolio.html" data-page="portfolio" aria-current="page" data-i18n="nav.portfolio"></a></li>
+            <li><a href="contact.html" data-page="contact" data-i18n="nav.contact"></a></li>
+            <li><button class="lang" type="button" id="lang" data-i18n-attr="aria-label:nav.lang;title:nav.lang"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.500 2.700 3.800 5.700 3.800 9S14.500 18.300 12 21c-2.500-2.700-3.800-5.700-3.800-9S9.500 5.700 12 3z"/></svg><span data-i18n="lang.code"></span></button></li>
+          </ul>
+        </nav>
+      </header>
+
+    <div class="stage" id="stage">
+    <section class="panel panel--page" id="panel">
+      <div class="head">
+        <h2 data-i18n="portfolio.title"></h2>
+        <p data-i18n="portfolio.subtitle"></p>
+      </div>
+      <div class="scroll"><div class="grid" id="grid"></div></div>
+    </section>
+    </div>
+  </div>
+
+  <!-- project popup -->
+  <div class="scrim" id="scrim" hidden>
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+      <button class="x" type="button" id="m-close" data-i18n-attr="aria-label:portfolio.closeProject"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+      <div class="m-info">
+        <h3 id="m-title"></h3>
+        <p class="m-meta" id="m-meta"></p>
+        <ul class="tags" id="m-tags"></ul>
+        <div class="m-text" id="m-text"></div>
+      </div>
+      <div class="m-pics" id="m-pics"></div>
+    </div>
+  </div>
+
+  <!-- zoomed picture -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" data-i18n-attr="aria-label:portfolio.viewer" hidden>
+    <button class="x" type="button" id="l-close" data-i18n-attr="aria-label:portfolio.closePic"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <button class="arrow prev" type="button" id="l-prev" data-i18n-attr="aria-label:portfolio.prev"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="arrow next" type="button" id="l-next" data-i18n-attr="aria-label:portfolio.next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    <figure><img id="l-img" alt=""><video id="l-video" controls playsinline preload="metadata" hidden></video><figcaption id="l-cap"></figcaption></figure>
+  </div>
+</div>
+
+<script src="js/lang/en.js"></script>
+<script src="js/lang/es.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/common.js"></script>
+<script src="js/portfolio.js"></script>
+</body>
+</html>

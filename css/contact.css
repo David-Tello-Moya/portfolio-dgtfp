@@ -1,0 +1,44 @@
+/* Contact page */
+.contact { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(24px, calc(56 * var(--s)), 90px); align-items: center; min-height: 90%; }
+.info { display: flex; flex-direction: column; align-items: stretch; gap: clamp(14px, calc(22 * var(--s)), 32px); min-width: 0; text-align: justify; align-items: center;}
+.info h3 { margin: 0; font-size: clamp(24px, calc(40 * var(--s)), 60px); font-weight: 700; line-height: 1.15; }
+.info p { margin: 0; font-size: var(--fs-body); line-height: 1.5; color: var(--muted); max-width: 38ch; text-align: justify; hyphens: auto; overflow-wrap: break-word; }
+.facts { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: clamp(10px, calc(14 * var(--s)), 20px); }
+.facts li {
+  display: flex; align-items: center; gap: clamp(12px, calc(18 * var(--s)), 26px); min-width: 0;
+  padding: clamp(10px, calc(14 * var(--s)), 20px) clamp(14px, calc(20 * var(--s)), 28px) clamp(10px, calc(14 * var(--s)), 20px) clamp(10px, calc(14 * var(--s)), 20px);
+  border-radius: clamp(18px, calc(32 * var(--s)), 48px);
+  background: var(--glass); border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.ico { flex: none; width: clamp(40px, calc(52 * var(--s)), 72px); aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.08); }
+.ico svg { width: 46%; height: 46%; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.facts small { display: block; font-size: clamp(12px, calc(15 * var(--s)), 20px); color: var(--faint); }
+.facts span { font-size: var(--fs-small); font-weight: 500; overflow-wrap: anywhere; }
+
+.form {
+  padding: clamp(18px, calc(36 * var(--s)), 52px);
+  border-radius: clamp(20px, calc(36 * var(--s)), 52px);
+  background: var(--glass); border: 1px solid rgba(255, 255, 255, 0.18);
+  display: grid; gap: clamp(12px, calc(20 * var(--s)), 28px); min-width: 0;
+}
+.row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, calc(20 * var(--s)), 28px); }
+.field { display: grid; gap: 8px; min-width: 0; }
+.field label { font-size: clamp(13px, calc(16 * var(--s)), 22px); font-weight: 500; color: var(--muted); }
+.field input, .field textarea {
+  width: 100%; font: inherit; font-size: clamp(14px, calc(18 * var(--s)), 26px); color: #fff;
+  padding: clamp(11px, calc(15 * var(--s)), 20px) clamp(14px, calc(18 * var(--s)), 24px);
+  border-radius: clamp(12px, calc(18 * var(--s)), 26px);
+  background: rgba(4, 14, 40, 0.45); border: 1px solid rgba(255, 255, 255, 0.24);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.field textarea { resize: vertical; min-height: 120px; }
+.field input::placeholder, .field textarea::placeholder { color: rgba(255, 255, 255, 0.45); }
+.field input:focus, .field textarea:focus { outline: none; border-color: #fff; box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5); }
+.send-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.status { margin: 0; font-size: var(--fs-small); color: var(--muted); min-height: 1.4em; }
+
+@media (max-width: 860px) {
+  .contact { grid-template-columns: minmax(0, 1fr); margin-top: 1rem; min-height: 60%; }
+  .row { grid-template-columns: minmax(0, 1fr); }
+  .info p { text-align: justify; hyphens: auto; overflow-wrap: break-word; }
+}
