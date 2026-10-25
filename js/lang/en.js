@@ -35,7 +35,7 @@ window.I18N.en = {
   'portfolio.play': 'Play video {n}',
   'portfolio.shot': '{title} screenshot {n}',
 
-  'projects.robot-c.title': 'Robot project',
+  'projects.robot-c.title': 'Robot Project',
   'projects.robot-c.blurb': 'Robotic solution developed for the ASTI Robotics Challenge.',
   'projects.robot-c.role': 'MAD Student',
   'projects.robot-c.text1': 'Comprehensive development of an autonomous mobile robot designed to compete in the ASTI Robotics Challenge, a leading educational robotics competition organized by the ASTI Foundation. The project, spearheaded by Digitech FP, employs a project-based learning (PBL) methodology and embraces a "Do It Yourself" (DIY) ethos.',
